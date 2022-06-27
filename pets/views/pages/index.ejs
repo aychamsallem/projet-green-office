@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <body class="container-fluid">
+    <header>
+      <%- include('../partials/header'); %>
+    </header>
+
+    <main>
+      <div class="jumbotron">
+        <h2><%= tagline %></h2>
+        <h4>Trouvez nos association partenaires</h4>
+       
+       
+
+     
+      </div>
+
+      <div class="row">
+        <% mascots.forEach(function(mascot) { %>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src=<%= mascot.organization%> class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%= mascot.name %></h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Contactez nous</a>
+                </div>
+              </div>
+              
+            </div>
+        <% }); %>
+          </div>
+    </main>
+
+    <footer>
+      <%- include('../partials/footer'); %>
+    </footer>
+  </body>
+</html>
